@@ -1,0 +1,12 @@
+.inputs {
+  margin: 10px;
+  height: 25px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #008080;
+  height: 33px;
+  font-size: 1rem;
+  color: white;
+}

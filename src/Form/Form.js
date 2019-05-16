@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 
 export default class Form extends Component {
   constructor() {
@@ -24,11 +25,11 @@ export default class Form extends Component {
 
   render() {
     return(
-      <form onSubmit={this.handleSubmit}>
-        <input onChange={this.handleChange} name='name' placeholder='name'></input>
-        <input onChange={this.handleChange} name='date' placeholder='date'></input>
-        <input onChange={this.handleChange} name='time' placeholder='time'></input>
-        <input onChange={this.handleChange} name='guests' placeholder='number of guest' type='number'></input>
+      <form onSubmit={this.handleSubmit} className='form'>
+        <input onChange={this.handleChange} name='name' placeholder='name' className='inputs'></input>
+        <input onChange={this.handleChange} name='date' placeholder='date' className='inputs'></input>
+        <input onChange={this.handleChange} name='time' placeholder='time' className='inputs'></input>
+        <input onChange={this.handleChange} name='guests' placeholder='number of guest' type='number' className='inputs'></input>
         <button>Make Reservation</button>
       </form>
     )

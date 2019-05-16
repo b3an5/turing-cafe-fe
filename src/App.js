@@ -38,7 +38,7 @@ class App extends Component {
     this.fetchReservation()
   }
 
-  deleteCardBE = async (res, ide) => {
+  deleteCardBE = async (ide) => {
     fetch(`http://localhost:3001/api/v1/reservations/${ide}`, {
       method: 'DELETE'
     })
@@ -48,7 +48,7 @@ class App extends Component {
   deleteRes = (ide) => {
     const updatedArr = this.state.resArr.filter((res) => res.id !== ide)
     this.setState({resArr: updatedArr})
-    this.deleteCardBE(updatedArr, ide)
+    this.deleteCardBE(ide)
   }
 
   render() {

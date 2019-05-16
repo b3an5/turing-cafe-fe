@@ -7,11 +7,11 @@ export default class ResCard extends Component {
     const {id, name, date, time, number} = this.props.res
     return(
       <div className='card'>
-        <h1 onClick={() => {this.props.deleteRes(id)}}>X</h1>
         <h1>{name}</h1>
         <h2>{date}</h2>
         <h2>{time}</h2>
         <h4>number on the reservation:{number}</h4>
+        <h1 className='cancel' onClick={() => {this.props.deleteRes(id)}}>Cancel Reservation</h1>
       </div>
     )
   }

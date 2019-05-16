@@ -1,6 +1,15 @@
 .card {
   background-color: white;
+  color: #008080;
   margin: 10px;
   padding: 5px;
   border: 3px solid teal;
+  border-radius: 10px;
+}
+
+.cancel {
+  background-color: #008080;
+  font-size: 1.5rem;
+  padding: 5px;
+  color: white;
 }

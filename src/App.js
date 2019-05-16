@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   createCard = async ({name, date, time, guests}) => {
-    console.log(guests)
      await fetch('http://localhost:3001/api/v1/reservations', {
       method: 'POST',
       body: JSON.stringify({
@@ -39,9 +38,17 @@ class App extends Component {
     this.fetchReservation()
   }
 
+  deleteCardBE = async (res, ide) => {
+    fetch(`http://localhost:3001/api/v1/reservations/${ide}`, {
+      method: 'DELETE'
+    })
+
+  }
+
   deleteRes = (ide) => {
     const updatedArr = this.state.resArr.filter((res) => res.id !== ide)
     this.setState({resArr: updatedArr})
+    this.deleteCardBE(updatedArr, ide)
   }
 
   render() {

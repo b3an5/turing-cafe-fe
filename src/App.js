@@ -39,10 +39,10 @@ class App extends Component {
     this.fetchReservation()
   }
 
-  // deleteRes = (ide) => {
-  //   const updatedArr = this.state.resArr.filter((res) => {res.id !== ide})
-  //   this.setState({resArr: updatedArr})
-  // }
+  deleteRes = (ide) => {
+    const updatedArr = this.state.resArr.filter((res) => res.id !== ide)
+    this.setState({resArr: updatedArr})
+  }
 
   render() {
     if(this.state.resArr.length > 0) {

@@ -11,7 +11,7 @@ export default class ResCard extends Component {
         <h1>{name}</h1>
         <h2>{date}</h2>
         <h2>{time}</h2>
-        <h3>number on the reservation:{number}</h3>
+        <h4>number on the reservation:{number}</h4>
       </div>
     )
   }
